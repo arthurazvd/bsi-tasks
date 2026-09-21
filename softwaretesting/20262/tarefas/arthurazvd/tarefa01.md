@@ -32,3 +32,7 @@ Utilizo o **Visual Studio Code**. A IDE possui suporte à depuração de Python 
 ## 5. Tutorial de CRUD com testes
 
 Foi utilizado como referência o [Quickstart do Django REST Framework](https://www.django-rest-framework.org/tutorial/quickstart/). O tutorial apresenta a criação de uma API CRUD usando modelos, serializers, viewsets e rotas. Ele também mostra como executar testes automatizados da API utilizando as ferramentas de teste do Django.
+
+## 6. Mock Objects
+
+Mock Objects são objetos simulados que substituem dependências reais durante um teste. Eles podem representar, por exemplo, um banco de dados, uma API externa ou outro serviço. Com mocks, é possível definir o retorno esperado e verificar se determinados métodos foram chamados corretamente. No Comercializa, os mocks foram usados nos testes unitários do serviço de produtos para testar as quatro operações do CRUD sem acessar o banco de dados real.
