@@ -22,3 +22,9 @@ O framework escolhido foi o **pytest**. Ele permite escrever testes de forma sim
 - [Documentação do pytest](https://docs.pytest.org/)
 - [Documentação do pytest-django](https://pytest-django.readthedocs.io/)
 - [Documentação do pytest-cov](https://pytest-cov.readthedocs.io/)
+
+## 4. IDE e ferramentas de debug
+
+Utilizo o **Visual Studio Code**. A IDE possui suporte à depuração de Python por meio de breakpoints, execução passo a passo, inspeção de variáveis, pilha de chamadas e console de depuração. Também permite executar e depurar testes individualmente pela interface de testes. Para o frontend, as ferramentas do navegador ajudam a inspecionar componentes, requisições HTTP e mensagens do console.
+
+- [Documentação de depuração em Python no VS Code](https://code.visualstudio.com/docs/python/debugging)
