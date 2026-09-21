@@ -48,3 +48,37 @@ O Comercializa possui um CRUD de produtos com as operações de inserir, consult
 Foi implementado um teste unitário para cada operação do CRUD. Os testes utilizam `unittest.mock` para substituir o gerenciador do modelo e os métodos de persistência. A experiência permitiu verificar cada operação isoladamente, com testes rápidos e sem dependência do banco de dados.
 
 Também foram implementados testes de integração que fazem requisições HTTP usando o `APIClient` e utilizam o banco de testes do Django. A principal diferença é que o teste de unidade verifica uma função isolada com dependências simuladas, enquanto o teste de integração verifica o funcionamento conjunto de rotas, serializers, modelos e banco de dados.
+
+## 8. Execução dos testes e cobertura
+
+O comando utilizado foi:
+
+```bash
+cd backend
+pytest
+```
+
+Resultado obtido:
+
+```text
+collected 73 items
+73 passed in 1.31s
+
+Name                              Stmts   Miss  Cover
+-----------------------------------------------------
+TOTAL                               252     50    80%
+
+Coverage HTML written to dir htmlcov
+Coverage XML written to file coverage.xml
+```
+
+O relatório HTML é gerado em `backend/htmlcov/index.html`. O arquivo `backend/coverage.xml` é gerado no formato XML compatível com o SonarQube.
+
+## 9. Integração Contínua
+
+O GitHub Actions foi configurado para executar a instalação das dependências, os testes e a geração dos relatórios de cobertura em cada push para as branches `main` e `task/**`, além dos pull requests direcionados à `main`.
+
+- [Workflow do GitHub Actions](https://github.com/arthurazvd/comercializa/blob/main/.github/workflows/tests.yml)
+- [Execuções do GitHub Actions](https://github.com/arthurazvd/comercializa/actions)
+
+O relatório `coverage.xml` e a pasta `htmlcov` são publicados como artefatos da execução do workflow.
