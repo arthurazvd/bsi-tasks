@@ -14,3 +14,11 @@ Os testes de unidade verificam pequenas partes do sistema de forma isolada, como
 ## 2. Linguagem e stack
 
 O projeto Comercializa utiliza **Python** no backend, com **Django**, **Django REST Framework** e banco de dados **SQLite**. No frontend são utilizados **JavaScript**, **Vue 3**, **Vite** e **Axios**. Para os testes do backend são utilizados **pytest**, **pytest-django**, **pytest-cov**, **factory-boy** e `unittest.mock`.
+
+## 3. Framework de Testes de Unidade
+
+O framework escolhido foi o **pytest**. Ele permite escrever testes de forma simples utilizando funções e instruções `assert`, possui descoberta automática dos arquivos de teste e oferece suporte a fixtures e plugins. Neste projeto, o `pytest-django` permite testar componentes do Django e o `pytest-cov` calcula a cobertura do código.
+
+- [Documentação do pytest](https://docs.pytest.org/)
+- [Documentação do pytest-django](https://pytest-django.readthedocs.io/)
+- [Documentação do pytest-cov](https://pytest-cov.readthedocs.io/)
