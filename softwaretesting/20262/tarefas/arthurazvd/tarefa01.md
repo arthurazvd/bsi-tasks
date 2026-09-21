@@ -11,3 +11,6 @@ Testes de software são procedimentos utilizados para verificar se um sistema se
 
 Os testes de unidade verificam pequenas partes do sistema de forma isolada, como funções, métodos ou classes. Dependências externas, como banco de dados ou serviços, podem ser substituídas por mocks. Dessa forma, o teste fica mais rápido e permite identificar com precisão em qual unidade ocorreu uma falha.
 
+## 2. Linguagem e stack
+
+O projeto Comercializa utiliza **Python** no backend, com **Django**, **Django REST Framework** e banco de dados **SQLite**. No frontend são utilizados **JavaScript**, **Vue 3**, **Vite** e **Axios**. Para os testes do backend são utilizados **pytest**, **pytest-django**, **pytest-cov**, **factory-boy** e `unittest.mock`.
