@@ -36,3 +36,15 @@ Foi utilizado como referência o [Quickstart do Django REST Framework](https://w
 ## 6. Mock Objects
 
 Mock Objects são objetos simulados que substituem dependências reais durante um teste. Eles podem representar, por exemplo, um banco de dados, uma API externa ou outro serviço. Com mocks, é possível definir o retorno esperado e verificar se determinados métodos foram chamados corretamente. No Comercializa, os mocks foram usados nos testes unitários do serviço de produtos para testar as quatro operações do CRUD sem acessar o banco de dados real.
+
+## 7. Implementação do CRUD e dos testes
+
+O Comercializa possui um CRUD de produtos com as operações de inserir, consultar, atualizar e excluir. A API foi implementada com um `ModelViewSet` do Django REST Framework.
+
+- [Implementação do CRUD](https://github.com/arthurazvd/comercializa/blob/main/backend/core/views.py)
+- [Testes unitários do CRUD](https://github.com/arthurazvd/comercializa/blob/main/backend/tests/test_product_service.py)
+- [Testes de integração da API](https://github.com/arthurazvd/comercializa/blob/main/backend/tests/test_api.py)
+
+Foi implementado um teste unitário para cada operação do CRUD. Os testes utilizam `unittest.mock` para substituir o gerenciador do modelo e os métodos de persistência. A experiência permitiu verificar cada operação isoladamente, com testes rápidos e sem dependência do banco de dados.
+
+Também foram implementados testes de integração que fazem requisições HTTP usando o `APIClient` e utilizam o banco de testes do Django. A principal diferença é que o teste de unidade verifica uma função isolada com dependências simuladas, enquanto o teste de integração verifica o funcionamento conjunto de rotas, serializers, modelos e banco de dados.
