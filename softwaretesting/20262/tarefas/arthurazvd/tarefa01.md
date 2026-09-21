@@ -28,3 +28,7 @@ O framework escolhido foi o **pytest**. Ele permite escrever testes de forma sim
 Utilizo o **Visual Studio Code**. A IDE possui suporte à depuração de Python por meio de breakpoints, execução passo a passo, inspeção de variáveis, pilha de chamadas e console de depuração. Também permite executar e depurar testes individualmente pela interface de testes. Para o frontend, as ferramentas do navegador ajudam a inspecionar componentes, requisições HTTP e mensagens do console.
 
 - [Documentação de depuração em Python no VS Code](https://code.visualstudio.com/docs/python/debugging)
+
+## 5. Tutorial de CRUD com testes
+
+Foi utilizado como referência o [Quickstart do Django REST Framework](https://www.django-rest-framework.org/tutorial/quickstart/). O tutorial apresenta a criação de uma API CRUD usando modelos, serializers, viewsets e rotas. Ele também mostra como executar testes automatizados da API utilizando as ferramentas de teste do Django.
